@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import SubmissionForm from '@/components/SubmissionForm';
 import CSVUpload from '@/components/CSVUpload';
