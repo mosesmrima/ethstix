@@ -39,8 +39,8 @@ export default function Dashboard() {
                 <h1 className={"text-center"}>Dashboard</h1>
             </div>
             <div className={"flex flex-col gap-4"}>
-                <Card className={"prose prose-invert self-end"}>
-                    <CardBody>
+                <Card className={"prose prose-invert self-end w-3/12"}>
+                    <CardBody className={"flex flex-col gap-4 items-center"}>
                         <span className={"flex gap-2"}>
                             <h5>Number of artifacts:</h5>
                             <Chip variant={"flat"} color={"primary"}>40</Chip>

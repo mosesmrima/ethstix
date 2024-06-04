@@ -23,11 +23,9 @@ export default function App() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem>
-                    <Button onClick={() => signOut()} as={Link} color="primary" href="#" variant="flat">
+                    <Button onClick={() => signOut()} color="primary" variant="flat">
                         Sign Out
                     </Button>
-                </NavbarItem>
             </NavbarContent>
         </Navbar>
     );
