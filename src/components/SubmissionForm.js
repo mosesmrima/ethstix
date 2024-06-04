@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Card, Text, Input, Textarea, Select, Button, Spacer } from '@nextui-org/react';
+import { Card, Input, Textarea, Select, SelectItem, Button, Spacer } from '@nextui-org/react';
+
 
 const SubmissionForm = () => {
     const [formData, setFormData] = useState({
@@ -51,7 +52,7 @@ const SubmissionForm = () => {
 
     return (
         <Card css={{ maxWidth: '600px', margin: '0 auto' }}>
-            <Text h3>Submit Threat Intelligence</Text>
+            <h1>Submit Threat Intelligence</h1>
             <form onSubmit={handleSubmit}>
                 <Select
                     name="indicatorType"
@@ -60,16 +61,16 @@ const SubmissionForm = () => {
                     onChange={handleChange}
                     placeholder="Select an indicator"
                 >
-                    <Select.Option value="IP Address">IP Address</Select.Option>
-                    <Select.Option value="Domain Name">Domain Name</Select.Option>
-                    <Select.Option value="File Hash">File Hash</Select.Option>
-                    <Select.Option value="URL">URL</Select.Option>
-                    <Select.Option value="Email Address">Email Address</Select.Option>
-                    <Select.Option value="Registry Key">Registry Key</Select.Option>
-                    <Select.Option value="Network Signature">Network Signature</Select.Option>
-                    <Select.Option value="Other">Other</Select.Option>
+                    <SelectItem value="IP Address">IP Address</SelectItem>
+                    <SelectItem value="Domain Name">Domain Name</SelectItem>
+                    <SelectItem value="File Hash">File Hash</SelectItem>
+                    <SelectItem value="URL">URL</SelectItem>
+                    <SelectItem value="Email Address">Email Address</SelectItem>
+                    <SelectItem value="Registry Key">Registry Key</SelectItem>
+                    <SelectItem value="Network Signature">Network Signature</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                 </Select>
-                {errors.indicatorType && <Text color="error">{errors.indicatorType}</Text>}
+                {errors.indicatorType && <h1 color="error">{errors.indicatorType}</h1>}
                 <Spacer y={1} />
 
                 <Input
@@ -80,7 +81,7 @@ const SubmissionForm = () => {
                     onChange={handleChange}
                     placeholder="Enter the indicator value"
                 />
-                {errors.indicatorValue && <Text color="error">{errors.indicatorValue}</Text>}
+                {errors.indicatorValue && <h1 color="error">{errors.indicatorValue}</h1>}
                 <Spacer y={1} />
 
                 <Input
@@ -91,7 +92,7 @@ const SubmissionForm = () => {
                     onChange={handleChange}
                     placeholder="e.g., APT29, Ransomware, Windows 10"
                 />
-                {errors.threatType && <Text color="error">{errors.threatType}</Text>}
+                {errors.threatType && <h1 color="error">{errors.threatType}</h1>}
                 <Spacer y={1} />
 
                 <Select
@@ -101,12 +102,12 @@ const SubmissionForm = () => {
                     onChange={handleChange}
                     placeholder="Select severity"
                 >
-                    <Select.Option value="Low">Low</Select.Option>
-                    <Select.Option value="Medium">Medium</Select.Option>
-                    <Select.Option value="High">High</Select.Option>
-                    <Select.Option value="Critical">Critical</Select.Option>
+                    <SelectItem value="Low">Low</SelectItem>
+                    <SelectItem value="Medium">Medium</SelectItem>
+                    <SelectItem value="High">High</SelectItem>
+                    <SelectItem value="Critical">Critical</SelectItem>
                 </Select>
-                {errors.severity && <Text color="error">{errors.severity}</Text>}
+                {errors.severity && <h1 color="error">{errors.severity}</h1>}
                 <Spacer y={1} />
 
                 <Textarea
@@ -116,7 +117,7 @@ const SubmissionForm = () => {
                     onChange={handleChange}
                     placeholder="Provide a brief description of the threat."
                 />
-                {errors.description && <Text color="error">{errors.description}</Text>}
+                {errors.description && <h1 color="error">{errors.description}</h1>}
                 <Spacer y={1} />
 
                 <Input
@@ -125,7 +126,7 @@ const SubmissionForm = () => {
                     name="file"
                     onChange={handleFileChange}
                 />
-                {errors.file && <Text color="error">{errors.file}</Text>}
+                {errors.file && <h1 color="error">{errors.file}</h1>}
                 <Spacer y={1} />
 
                 <Input

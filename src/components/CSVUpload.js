@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
-import { Card, Text, Input, Button, Spacer } from '@nextui-org/react';
+import { Card, Input, Button, Spacer } from '@nextui-org/react';
 
 const CSVUpload = () => {
     const [csvData, setCsvData] = useState([]);
@@ -50,22 +50,22 @@ const CSVUpload = () => {
 
     return (
         <Card css={{ maxWidth: '600px', margin: '0 auto' }}>
-            <Text h3>Upload CSV</Text>
-            <Text>
+            <h1>Upload CSV</h1>
+            <h1>
                 Please ensure your CSV file follows the structure below:
-            </Text>
+            </h1>
             <Spacer y={0.5} />
-            <Text small>
+            <h1>
                 "Threat Indicator Selection","Threat Indicator Input","Threat Type Tag","Severity","Brief Description","Upload Sample or Hash"
                 <br />
                 "IP Address","","APT29","Low","Suspicious activity detected","sample.exe"
                 <br />
                 "Domain Name","","Ransomware","Medium","Malicious domain identified",""
-            </Text>
+            </h1>
             <Spacer y={1} />
             <form onSubmit={handleSubmit}>
                 <Input type="file" accept=".csv" onChange={handleFileChange} bordered />
-                {error && <Text color="error">{error}</Text>}
+                {error && <h1 color="error">{error}</h1>}
                 <Spacer y={1} />
                 <Button type="submit">Submit CSV</Button>
             </form>
