@@ -1,0 +1,124 @@
+[
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--68789ffe-ff3a-5256-b210-64600fa288cd",
+    "type": "indicator",
+    "labels": [
+      "yara",
+      "MAL_WIPER_CaddyWiper_Mar22_1"
+    ],
+    "pattern": "rule MAL_WIPER_CaddyWiper_Mar22_1\n{\n\tmeta:\n\t\tdescription = \"Detects CaddyWiper malware\"\n\t\tauthor = \"Florian Roth\"\n\t\treference = \"https://twitter.com/ESETresearch/status/1503436420886712321?s=20&t=xh8JK6fEmRIrnqO7Ih_PNg\"\n\t\tdate = \"2022-03-15\"\n\t\tscore = 85\n\t\thash1 = \"1e87e9b5ee7597bdce796490f3ee09211df48ba1d11f6e2f5b255f05cc0ba176\"\n\t\thash2 = \"a294620543334a721a2ae8eaaf9680a0786f4b9a216d75b55cfd28f39e9430ea\"\n\t\thash3 = \"ea6a416b320f32261da8dafcf2faf088924f99a3a84f7b43b964637ea87aef72\"\n\t\thash4 = \"f1e8844dbfc812d39f369e7670545a29efef6764d673038b1c3edd11561d6902\"\n\n\tstrings:\n\t\t$op1 = { ff 55 94 8b 45 fc 50 ff 55 f8 8a 4d ba 88 4d ba 8a 55 ba 80 ea 01 }\n\t\t$op2 = { 89 45 f4 83 7d f4 00 74 04 eb 47 eb 45 6a 00 8d 95 1c ff ff ff 52 }\n\t\t$op3 = { 6a 20 6a 02 8d 4d b0 51 ff 95 68 ff ff ff 85 c0 75 0a e9 4e 02 00 00 }\n\t\t$op4 = { e9 67 01 00 00 83 7d f4 05 74 0a e9 5c 01 00 00 e9 57 01 00 00 8d 45 98 50 6a 20 }\n\n\tcondition:\n\t\tuint16(0)==0x5a4d and filesize <50KB and 3 of them or all of them\n}\n",
+    "created": "2022-03-17T11:05:22.773261Z",
+    "modified": "2022-03-17T11:05:22.773261Z"
+  },
+  {
+    "id": "indicator--2a510904-b77e-53e5-8774-bd4d883d334d",
+    "type": "indicator",
+    "labels": [
+      "QakBot",
+      "Admiralty Code - Confirmed by other sources",
+      "Malware - Remote Access Trojan"
+    ],
+    "pattern": "/* \n\n   YARA Rule Set \n\n   Author: Arda Buyukkaya \n\n   Date: 2022-11-29 \n\n   Identifier: QakBot Loader \n\n   \n\n*/ \n\n  \n\n/* Rule Set ----------------------------------------------------------------- */ \n\n  \n\nrule qakbot_loader { \n\n   meta: \n\n      description = \"qakbot loader - file WW.js\" \n\n      author = \"EclecticIQ Threat Research Team\" \n\n      date = \"2022-11-29\" \n\n      hash1 = \"c5df8f8328103380943d8ead5345ca9fe8a9d495634db53cf9ea3266e353a3b1\" \n\n   strings: \n\n      $s1 = \"s.shellexecute(\\\"regS\\\"+content, \\\"port\\\\\\\\resemblance.tmp\\\", \\\"\\\", \\\"open\\\", 1);\" fullword ascii \n\n      $s2 = \"var content = WScript.CreateObject(\\\"Scripting.FileSystemObject\\\").OpenTextFile(\\\"data.txt\\\", 1).ReadAll();\" fullword ascii \n\n      $s3 = \"var s = WScript.CreateObject(\\\"shell.application\\\");\" fullword ascii \n\n      $s4 = \"// SIG // kfFY2pbnF13DvPG3LVxrrk1Daq6tsskeyXyIaMiJ3iYa\" fullword ascii \n\n      $s5 = \"// SIG // 3kSPNrrfN2sRzFYsNfrFaWz8YOdU254qNZQfd9O/VjxZ\" fullword ascii \n\n      $s6 = \"// SIG // bS9TZWN0aWdvUHVibGljQ29kZVNpZ25pbmdDQVIzNi5j\" fullword ascii \n\n      $s7 = \"// SIG // X5X6KYFKxAXcUee9UjzpnQvBt6n8P/ofwIQ0cnqVrB1e\" fullword ascii \n\n      $s8 = \"// SIG // k7RgVZSNNqfJionWlBYwDQYJKoZIhvcNAQEMBQAwezEL\" fullword ascii \n\n      $s9 = \"// SIG // CWaZWFwpo7kMpjA4PNBGNjV8nLruw9X5Cnb6fgUbQMqS\" fullword ascii \n\n      $s10 = \"// SIG // aWdvLmNvbS9TZWN0aWdvUHVibGljQ29kZVNpZ25pbmdS\" fullword ascii \n\n      $s11 = \"// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFPERsxo2fxFs\" fullword ascii \n\n      $s12 = \"// SIG // VR0gBEMwQTA1BgwrBgEEAbIxAQIBAwIwJTAjBggrBgEF\" fullword ascii \n\n      $s13 = \"// SIG // KCFEzS2PTiVwu5efksVCCFzw8w5LXEFuqHKfnbrjOacF\" fullword ascii \n\n      $s14 = \"// SIG // fbY2lBpq7YQvNHjuY8aqC7luOzFWYg4xvd2E3UORn5ol\" fullword ascii \n\n      $s15 = \"// SIG // nTgkKjhQOPMedU1KZW3r8Hm40HGzKLdo0PxmK8YzFzbx\" fullword ascii \n\n      $s16 = \"// SIG // NRN3BTNPYy64LeG/ZacEaxjYcfrMCPJtiZkQsa3bPizk\" fullword ascii \n\n      $s17 = \"// SIG // NenVetG1fwCuqZCqxX8BnBCxFvzMbhjcb2L+plCnuHu4\" fullword ascii \n\n      $s18 = \"// SIG // cQrHXD8SS1UbjifrmAmZyI2mz3fLYAwYXg2Llsp1EwV9\" fullword ascii \n\n      $s19 = \"// SIG // ZWQxKzApBgNVBAMTIlNlY3RpZ28gUHVibGljIENvZGUg\" fullword ascii \n\n      $s20 = \"// SIG // BggrBgEFBQcwAoY4aHR0cDovL2NydC5zZWN0aWdvLmNv\" fullword ascii \n\n   condition: \n\n      uint16(0) == 0x2a2f and filesize < 30KB and \n\n      1 of ($s*) and 4 of them \n\n}",
+    "created": "2022-12-14T09:19:33.104159Z",
+    "modified": "2022-12-14T09:19:33.104159Z"
+  },
+  {
+    "id": "indicator--2d34b5cc-59c3-54e9-8f78-dee4f4f86c77",
+    "type": "indicator",
+    "labels": [
+      "QakBot",
+      "Admiralty Code - Confirmed by other sources",
+      "Malware - Remote Access Trojan"
+    ],
+    "pattern": "/* \n\n   YARA Rule Set \n\n   Author: Arda Buyukkaya \n\n   Date: 2022-11-29 \n\n   Identifier: Qakbot Malware \n\n    \n\n*/ \n\n  \n\n/* Rule Set ----------------------------------------------------------------- */ \n\n  \n\nrule qakbot_malware { \n\n   meta: \n\n      description = \"Qakbot Malware - file resemblance.tmp\" \n\n      author = \"EclecticIQ Threat Research Team \" \n\n      date = \"2022-11-29\" \n\n      hash1 = \"8ca16991684f7384c12b6622b8d1bcd23bc27f186f499c2059770ddd3031f274\" \n\n   strings: \n\n      $s1 = \"GDSC.exe\" fullword wide \n\n      $s2 = \"fwpolicyiomgr.dll\" fullword ascii \n\n      $s3 = \"6KAQAsOGxhWjAwQHbgEHbtEBQSAIC0LIAP0CB27JA4QAnAABQaH/CIMk6NOLQotZvAa8EwEcyTH+hewA4bU0118DLCi8hdYBieI4lQd8udQRAihIzukCqADbRsP2Aijc\" ascii \n\n      $s4 = \"DdwL7mDuptEUhl8Onn5CsVr25Fan5Ml5U4wwgfwJjR54cbvJBWMW5nEbyPZSw+XZpjtDLlspXpGf0RdpcES6RgSsjKF5njH+/eEPJgA5AK//8I4mBqHkmQnRev+lPBmw\" ascii \n\n      $s5 = \"xAdSFPwrAitJZwHe2RbviOgDOCjk3BJI/bX/P70ortmk2f43rSQoQTLYAFcOrxsDMCg9BxrZJcICfTPEAMn/AShJ/wEMtPzf6eWsv7yun/9fAo7AArThzf3k+xU86r23\" ascii \n\n      $s6 = \"/BCIAcGsAAatMUPOqtSLMdor/YWwAhQR7tEL2fwBMkh4ufYC8y7N9gKLWQt8S9n2zxEHBp6D9LPUrQKLNr77MLIyFvEYr+oGT+tZnov8C56JAYXJAoMBITERDlLTFQLz\" ascii \n\n      $s7 = \"/InM3BDLLf0Iz31JreLaXonZ/NA0/AQoMM+dpKkvyGIIszes3ATPKNu/p7YdAbmKjwE+ygH++a0EB3x1pu4CzQh76mE9mzwChYl/PWE9AeDOzcQtrh0B3dvGwkgCTy0Y\" ascii \n\n   condition: \n\n      uint16(0) == 0x5a4d and filesize < 2000KB and \n\n      1 of ($s*) and 4 of them \n\n}",
+    "created": "2022-12-14T09:19:33.104159Z",
+    "modified": "2022-12-14T09:19:33.104159Z"
+  },
+  {
+    "id": "indicator--f0375c1e-d022-540b-a623-0e0132261786",
+    "type": "indicator",
+    "labels": [
+      "Malware - Trojan"
+    ],
+    "pattern": "rule QakBot_OneNote {\n    meta:\n    author = \"EclecticIQ Researcher\"\n    creation_date = \"2023-02-06\" \n    filetype = \"OneNote\"\n    description = \"Detects QakBot Malware Delivered by OneNote\" \n    classification = \"TLP:WHITE\"\n    version = \"1.0\"\n    md5 = \"7f2c68afd0d99d634813c305dae67a1b\"\n   strings:\n      $ = \"' https://www.instructables.com/How-to-Make-a-message-box-using-VBScript/\" fullword ascii\n      $ = \"WshShell.RegWrite \\\"HKCU\\\\SOFTWARE\\\\Firm\\\\Soft\\\\Name\\\", content, \\\"REG_SZ\\\"\" fullword ascii\n      $ = \"Z:\\\\build\\\\one\\\\attachment.hta\" fullword wide\n      $ = \"var content = document.getElementById(\\\"content\\\").innerText;\" fullword ascii\n      $ = \"attachment.hta\" fullword wide\n      $ = \"WshShell.RegDelete(\\\"HKCU\\\\SOFTWARE\\\\Firm\\\\Soft\\\\Name\\\")\" fullword ascii\n      $ = \"<div id=\\\"content\\\">f30ku30kn30kc30kt30ki30ko30kn30k 30ks30kl30ke30ke30kp30k(30km30ki30kl30kl30ki30ks30k)30k{30kv30ka30kr30k 30k\" ascii\n      /* GUID FileDataStoreObject https://blog.didierstevens.com/ */\n      $ = {E7 16 E3 BD 65 26 11 45 A4 C4 8D 4D 0B 7A 9E AC 4D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3C 68 74 6D 6C 3E}\n   \t  $ = \"Z:\\\\build\\\\one\\\\Open.hta\" fullword wide\n      $ = \"Open.hta\" fullword wide\n      $ = \"double click\" fullword wide\n      $ = /<script language=\"(vbscript|javascript)/ nocase wide ascii\n   condition:\n      ( uint16(0) == 0x52e4 and filesize < 500KB and ( 4 of them )\n      ) or ( all of them )\n}",
+    "created": "2023-02-20T15:10:55.156504Z",
+    "modified": "2023-02-20T15:10:55.156504Z"
+  },
+  {
+    "id": "indicator--1b666aab-6f46-533f-9b9e-26ccab160e94",
+    "type": "indicator",
+    "labels": [
+      "Malware - Trojan",
+      "Admiralty Code - Confirmed by other sources"
+    ],
+    "pattern": "rule QakBot_OneNote {\n    meta:\n    author = \"EclecticIQ Researcher\"\n    creation_date = \"2023-02-06\" \n    filetype = \"OneNote\"\n    description = \"Detects QakBot Malware Delivered by OneNote\" \n    classification = \"TLP:WHITE\"\n    version = \"1.0\"\n    md5 = \"7f2c68afd0d99d634813c305dae67a1b\"\n   strings:\n      $ = \"' https://www.instructables.com/How-to-Make-a-message-box-using-VBScript/\" fullword ascii\n      $ = \"WshShell.RegWrite \\\"HKCU\\\\SOFTWARE\\\\Firm\\\\Soft\\\\Name\\\", content, \\\"REG_SZ\\\"\" fullword ascii\n      $ = \"Z:\\\\build\\\\one\\\\attachment.hta\" fullword wide\n      $ = \"var content = document.getElementById(\\\"content\\\").innerText;\" fullword ascii\n      $ = \"attachment.hta\" fullword wide\n      $ = \"WshShell.RegDelete(\\\"HKCU\\\\SOFTWARE\\\\Firm\\\\Soft\\\\Name\\\")\" fullword ascii\n      $ = \"<div id=\\\"content\\\">f30ku30kn30kc30kt30ki30ko30kn30k 30ks30kl30ke30ke30kp30k(30km30ki30kl30kl30ki30ks30k)30k{30kv30ka30kr30k 30k\" ascii\n      /* GUID FileDataStoreObject https://blog.didierstevens.com/ */\n      $ = {E7 16 E3 BD 65 26 11 45 A4 C4 8D 4D 0B 7A 9E AC 4D 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3C 68 74 6D 6C 3E}\n   \t  $ = \"Z:\\\\build\\\\one\\\\Open.hta\" fullword wide\n      $ = \"Open.hta\" fullword wide\n      $ = \"double click\" fullword wide\n      $ = /<script language=\"(vbscript|javascript)/ nocase wide ascii\n   condition:\n      ( uint16(0) == 0x52e4 and filesize < 500KB and ( 4 of them )\n      ) or ( all of them )\n}",
+    "created": "2023-02-20T15:10:55.156504Z",
+    "modified": "2023-02-20T15:10:55.156504Z"
+  }
+]
