@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Card as NextUICard, CardHeader, CardBody } from '@nextui-org/react';
-import { DonutChart, BarChart, LineChart, ScatterChart, AreaChart, FunnelChart, ProgressCircle, TextInput, NumberInput, Button, DateRangePicker, Textarea, Accordion, AccordionHeader, AccordionBody, Badge, Callout, Dialog, DialogPanel, Divider, Select, SelectItem, Switch, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell, List, ListItem, BarList, Title, Text } from '@tremor/react';
+import { DonutChart, BarChart, LineChart, ScatterChart, AreaChart, FunnelChart, ProgressCircle, DateRangePicker, Callout, Divider, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell, BarList, Title, Text } from '@tremor/react';
 import { InformationCircleIcon, ShieldCheckIcon, RssIcon, LockClosedIcon } from '@heroicons/react/solid';
 import 'tailwindcss/tailwind.css';
 

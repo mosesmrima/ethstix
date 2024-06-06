@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, CardHeader, CardBody, Button, Spinner, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const IndicatorsDisplay = () => {
     const [indicators, setIndicators] = useState([]);
@@ -47,7 +46,7 @@ const IndicatorsDisplay = () => {
     return (
         <div className="flex items-center flex-col  w-screen">
             <h2>Indicators Data</h2>
-            <div className={"flex items-start justify-start gap-8"}>
+            <div className={"flex flex-col items-center gap-8"}>
                 <Card className={"w-1/2"}>
                     <CardHeader className={"flex justify-between px-8"}>
                         <h4>Indicators</h4>
@@ -56,7 +55,7 @@ const IndicatorsDisplay = () => {
                         </Button>
                     </CardHeader>
                     <CardBody>
-                        <Table aria-label="Indicators Table">
+                        <Table isStriped={true} isCompact={true} isHeaderSticky={true} aria-label="Indicators Table">
                             <TableHeader>
                                 <TableColumn>ID</TableColumn>
                                 <TableColumn>Labels</TableColumn>
@@ -69,7 +68,7 @@ const IndicatorsDisplay = () => {
                                     <TableRow key={indicator.id}>
                                         <TableCell>{indicator.id}</TableCell>
                                         <TableCell>{indicator.labels.join(", ")}</TableCell>
-                                        <TableCell>
+                                        <TableCell height={4}>
                                             <pre>{indicator.pattern}</pre>
                                         </TableCell>
                                         <TableCell>{indicator.created}</TableCell>
@@ -78,21 +77,6 @@ const IndicatorsDisplay = () => {
                                 ))}
                             </TableBody>
                         </Table>
-                    </CardBody>
-                </Card>
-                <Card className={"w-1/2"}>
-                    <CardHeader>
-                        <h4>Indicators Visualization</h4>
-                    </CardHeader>
-                    <CardBody>
-                        <ResponsiveContainer width="100%" height={400}>
-                            <BarChart data={indicators}>
-                                <XAxis dataKey="id" />
-                                <YAxis />
-                                <Tooltip />
-                                <Bar dataKey="labels.length" fill="#8884d8" />
-                            </BarChart>
-                        </ResponsiveContainer>
                     </CardBody>
                 </Card>
             </div>
