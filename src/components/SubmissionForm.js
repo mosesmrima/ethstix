@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Button } from '@nextui-org/react';
+import {Button, Card} from '@nextui-org/react';
 import 'tailwindcss/tailwind.css';
 
 const SubmissionForm = () => {
@@ -8,12 +8,11 @@ const SubmissionForm = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        // Handle form submission logic here
     };
 
     return (
-        <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md prose">
-            <h1 className="text-2xl font-bold mb-4">Submit Threat Intelligence</h1>
+        <Card className="max-w-lg mx-auto p-6 shadow-md prose prose-invert">
+            <h1 className="mb-4">Submit Threat Intelligence</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Threat Indicator</label>
@@ -102,12 +101,12 @@ const SubmissionForm = () => {
                 </div>
 
                 <div className="flex justify-end">
-                    <Button type="submit" className="mt-2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">
+                    <Button type="submit">
                         Submit
                     </Button>
                 </div>
             </form>
-        </div>
+        </Card>
     );
 };
 

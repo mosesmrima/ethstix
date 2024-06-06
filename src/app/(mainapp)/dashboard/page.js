@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Card as NextUICard, CardHeader, CardBody } from '@nextui-org/react';
-import { DonutChart, BarChart, LineChart, ScatterChart, AreaChart, FunnelChart, ProgressCircle, TextInput, NumberInput, Button, DateRangePicker, Textarea, Accordion, AccordionHeader, AccordionBody, Badge, Callout, Dialog, DialogPanel, Divider, Select, SelectItem, Switch, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell, List, ListItem, BarList, Title, Text } from '@tremor/react';
+import { DonutChart, BarChart, LineChart, ScatterChart, AreaChart, FunnelChart, ProgressCircle, DateRangePicker, Callout, Divider, Table, TableHead, TableRow, TableHeaderCell, TableBody, TableCell, BarList, Title, Text } from '@tremor/react';
 import { InformationCircleIcon, ShieldCheckIcon, RssIcon, LockClosedIcon } from '@heroicons/react/solid';
 import 'tailwindcss/tailwind.css';
 
@@ -33,8 +33,6 @@ const ipAddresses = [
     { ip: '192.168.1.1', occurrences: 40 },
     { ip: '172.16.0.1', occurrences: 30 },
     { ip: '10.0.0.1', occurrences: 20 },
-    { ip: '203.0.113.1', occurrences: 10 },
-    { ip: '198.51.100.1', occurrences: 5 },
 ];
 
 const threatTrends = [
@@ -60,13 +58,11 @@ const Dashboard = () => {
     });
 
     return (
-        <div className="flex flex-col gap-6 p-8 bg-gray-900 text-white min-h-screen">
+        <div className="flex flex-col gap-6 p-8  text-white min-h-screen">
             <div className="prose prose-invert self-center">
                 <Title className="text-center text-4xl font-bold text-blue-500">EthStix Dashboard</Title>
                 <Text className="text-center text-lg text-gray-300">Decentralized and near-real-time cyber threat intelligence sharing</Text>
             </div>
-
-            <Divider color="blue" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
