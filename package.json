@@ -12,12 +12,15 @@
     "@auth/firebase-adapter": "^2.2.0",
     "@headlessui/react": "^2.0.4",
     "@headlessui/tailwindcss": "^0.2.1",
+    "@heroicons/react": "^1.0.6",
     "@next-auth/firebase-adapter": "^2.0.1",
     "@nextui-org/react": "^2.4.1",
     "@nextui-org/shared-icons": "^2.0.7",
     "@remixicon/react": "^4.2.0",
     "@tremor/react": "^3.17.2",
+    "axios": "^1.7.2",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "ethers": "^6.12.2",
     "firebase": "^10.12.2",
     "firebase-admin": "^11.11.1",
@@ -28,7 +31,10 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
-    "tailwind-merge": "^2.3.0"
+    "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7",
+    "tailwind-merge": "^2.3.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

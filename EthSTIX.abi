@@ -1,0 +1,201 @@
+[
+  {
+    "type": "function",
+    "name": "addOrUpdateIndicator",
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "_labels",
+        "type": "string[]",
+        "internalType": "string[]"
+      },
+      {
+        "name": "_pattern",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "_created",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "_modified",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getAllIndicatorIds",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "string[]",
+        "internalType": "string[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAllIndicators",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct EthSTIX.Indicator[]",
+        "components": [
+          {
+            "name": "id",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "labels",
+            "type": "string[]",
+            "internalType": "string[]"
+          },
+          {
+            "name": "pattern",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "created",
+            "type": "string",
+            "internalType": "string"
+          },
+          {
+            "name": "modified",
+            "type": "string",
+            "internalType": "string"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getIndicator",
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "id",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "labels",
+        "type": "string[]",
+        "internalType": "string[]"
+      },
+      {
+        "name": "pattern",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "created",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "modified",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "event",
+    "name": "IndicatorAdded",
+    "inputs": [
+      {
+        "name": "id",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "labels",
+        "type": "string[]",
+        "indexed": false,
+        "internalType": "string[]"
+      },
+      {
+        "name": "pattern",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "created",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "modified",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "IndicatorUpdated",
+    "inputs": [
+      {
+        "name": "id",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "labels",
+        "type": "string[]",
+        "indexed": false,
+        "internalType": "string[]"
+      },
+      {
+        "name": "pattern",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "created",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "modified",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  }
+]
